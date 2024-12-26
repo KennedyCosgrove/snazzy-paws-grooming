@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snazzy Paws Grooming</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Logo and Title -->
+    <header>
+        <div class="logo">
+            <img src="images/Logo.png" alt="Snazzy Paws Logo">
+        </div>
+        <div class="title">
+            <h1>Snazzy Paws Grooming</h1> <!-- Clear font, aligned left with logo -->
+        </div>
+        
+        <!-- Center Section: Page Title (Dynamic) -->
+        <div class="page-title">
+            <h2>Booking</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section 1: Navigation Cards Section Below the Banner -->
+    <section class="navigation-cards">
+        <div class="card">
+            <a href="#appointment-form">Appointment Form</a>
+        </div>
+        <div class="card">
+            <a href="#service-selection">Service Selection</a>
+        </div>
+        <div class="card">
+            <a href="#contact-details">Contact Details</a> 
+        </div>
+        <div class="card">
+            <a href="#calendar-tool">Calendar</a> 
+        </div>
+        <div class="card">
+            <a href="#contact-us">Contact Us</a> 
+        </div>
+    </section>
+
+    <!-- Main Content Area on the Right -->
+    <div class="main-content">
+        <!-- Appointment Form Section -->
+        <section id="appointment-form">
+            <h2>Appointment Form</h2>
+            <form id="booking-form" onsubmit="return validateForm()">
+                <label for="owner-name">Owner's Name:</label>
+                <input type="text" id="owner-name" name="owner-name" required><br>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="dog-name">Dog's Name:</label>
+                <input type="text" id="dog-name" name="dog-name" required><br>
+
+                <label for="dog-breed">Breed:</label>
+                <input type="text" id="dog-breed" name="dog-breed" required><br>
+
+                <label for="dog-age">Age:</label>
+                <input type="number" id="dog-age" name="dog-age" required><br>
+
+                <!-- Service Selection Section -->
+                <section id="service-selection">
+                    <h2>Service Selection</h2>
+                    <div class="service-buttons">
+                        <button type="button" id="bath-brush">Bath and Brush</button>
+                        <button type="button" id="haircut">Haircut</button>
+                        <button type="button" id="nail-trim">Nail Trim</button>
+                        <button type="button" id="ear-cleaning">Ear Cleaning</button>
+                        <button type="button" id="teeth-brushing">Teeth Brushing</button>
+                        <button type="button" id="de-shedding">De-shedding Treatment</button>
+                        <button type="button" id="flea-tick">Flea and Tick Treatment</button>
+                        <button type="button" id="spa-package">Spa Package</button>
+                        <button type="button" id="express-service">Express Service</button>
+                        <button type="button" id="medicated-bath">Medicated Bath</button>
+                        <button type="button" id="special-breed">Special-Breed Cuts</button>
+                        <button type="button" id="puppy-package">Puppy Package</button>
+                        <button type="button" id="senior-dog">Senior Dog Package</button>
+                        <button type="button" id="full-grooming">Full Grooming Package</button>
+                    </div>
+                </section>
+
+                <!-- Contact Details Section -->
+                <section id="contact-details">
+                    <h2>Contact Details</h2>
+                    <p>Please provide your contact details for follow-ups.</p>
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="tel" id="phone-number" name="phone-number" required><br>
+
+                    <label for="alternate-phone-number">Alternate Phone Number:</label>
+                    <input type="tel" id="alternate-phone-number" name="alternate-phone-number"><br>
+                </section>
+
+                <!-- Calendar Tool Section -->
+                <section id="calendar-tool">
+                    <h2>Calendar</h2>
+                    <p>Choose your appointment date and time.</p>
+                    <input type="date" id="appointment-date" name="appointment-date" required>
+                    <input type="time" id="appointment-time" name="appointment-time" required><br>
+                </section>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer Section with Contact Details -->
+    <footer id="contact-us">
+        <p>Contact: Snazzy Paws Grooming</p>
+        <p>Location: Hamilton, New Zealand</p>
+        <p>Opening Hours: Mon - Sat, 9am - 5pm</p>
+    </footer>
+
+    <script>
+        // Function to validate form fields
+        function validateForm() {
+            // Check if all required fields are filled
+            var ownerName = document.getElementById('owner-name').value;
+            var email = document.getElementById('email').value;
+            var dogName = document.getElementById('dog-name').value;
+            var dogBreed = document.getElementById('dog-breed').value;
+            var dogAge = document.getElementById('dog-age').value;
+            var phoneNumber = document.getElementById('phone-number').value;
+            var appointmentDate = document.getElementById('appointment-date').value;
+            var appointmentTime = document.getElementById('appointment-time').value;
+            var selectedService = false;
+
+            // Check for selected service
+            var services = document.querySelectorAll('#service-selection .service-buttons button');
+            services.forEach(function(service) {
+                if (service.style.backgroundColor === 'rgb(224, 123, 42)') { // Service selected
+                    selectedService = true;
+                }
+            });
+
+            // Show error messages if any required fields are empty
+            if (!ownerName || !email || !dogName || !dogBreed || !dogAge || !phoneNumber || !appointmentDate || !appointmentTime || !selectedService) {
+                alert("Please fill in all required fields, select a service, and choose a date and time.");
+                return false;
+            }
+            return true;
+        }
+
+        // Function to handle service button selection
+        document.querySelectorAll('#service-selection .service-buttons button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                this.style.backgroundColor = this.style.backgroundColor === 'rgb(224, 123, 42)' ? '' : 'rgb(224, 123, 42)';
+            });
+        });
+    </script>
+</body>
+</html>
