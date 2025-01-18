@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snazzy Paws Grooming</title>
+
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Logo and Title -->
+    <header>
+        <div class="logo">
+            <img src="images/Logo.png" alt="Snazzy Paws Logo">
+        </div>
+        <div class="title">
+            <h1>Snazzy Paws Grooming</h1> <!-- Clear font, aligned left with logo -->
+        </div>
+        
+        <!-- Center Section: Page Title (Dynamic) -->
+        <div class="page-title">
+            <h2>Staff Roster</h2>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <!-- Main Content Section -->
+        <main>
+            <div class="main-content-bg">
+                <!-- Section 1: Side Navigation Cards -->
+                <section class="container-fluid navigation-cards mt-5 pt-3"> <!-- Bootstrapped: container-fluid for full-width and margin/padding utilities -->
+                    <div class="row">
+                        <!-- Bootstrapped Grid System: Each card inside a column with col-12 to stack vertically -->
+                        <div class="col-12 mb-3">
+                            <div class="card">
+                                <a href="#staff-contacts" class="card-body text-decoration-none text-dark">
+                                    Staff and Contacts
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="card">
+                                <a href="#staff-roles" class="card-body text-decoration-none text-dark">
+                                    Roles and Responsibilities
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="card">
+                                <a href="#timetable" class="card-body text-decoration-none text-dark">
+                                    Staff Working Hours
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="card">
+                                <a href="#staff-info" class="card-body text-decoration-none text-dark">
+                                    Important Staff Information
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Staff and Contacts Section -->
+        <section id="staff-contacts" class="container py-5">
+            <h3 class="text-center mb-4">Staff and Contacts</h3>
+
+            <!-- Bootstrap Grid System -->
+            <div class="row justify-content-center">
+                <!-- Left Column (Table) -->
+                <div class="col-md-8">
+                    <!-- Table displaying staff information -->
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Work Phone</th>
+                                <th>Home Phone</th>
+                                <th>Work Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>123 Grooming Lane, Hamilton</td>
+                                <td>(07) 123 4567</td>
+                                <td>(07) 987 6543</td>
+                                <td>john.doe@sppaws.co.nz</td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>456 Petcare Road, Hamilton</td>
+                                <td>(07) 234 5678</td>
+                                <td>(07) 876 5432</td>
+                                <td>jane.smith@sppaws.co.nz</td>
+                            </tr>
+                            <tr>
+                                <td>Emily Johnson</td>
+                                <td>789 Dog Groom Street, Hamilton</td>
+                                <td>(07) 345 6789</td>
+                                <td>(07) 765 4321</td>
+                                <td>emily.johnson@sppaws.co.nz</td>
+                            </tr>
+                            <tr>
+                                <td>Michael Brown</td>
+                                <td>101 Pet Plaza, Hamilton</td>
+                                <td>(07) 456 7890</td>
+                                <td>(07) 654 3210</td>
+                                <td>michael.brown@sppaws.co.nz</td>
+                            </tr>
+                            <tr>
+                                <td>Alice Green</td>
+                                <td>202 Dog Care Crescent, Hamilton</td>
+                                <td>(07) 567 8901</td>
+                                <td>(07) 543 2109</td>
+                                <td>alice.green@sppaws.co.nz</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    
+            <!-- Staff Roles Section -->
+            <section id="staff-roles" class="bg-light py-5">
+                <div class="container">
+                    <!-- Centered Section Heading (Bootstrap class "text-center") -->
+                    <h3 class="text-center mb-4">Roles and Responsibilities</h3>
+                    
+                    <!-- Centered Paragraph (Bootstrap class "text-center") -->
+                    <p class="text-center">Each team member plays a vital role in ensuring that our grooming services are delivered with the utmost care and professionalism. Below are some of the key roles within our team:</p>
+                    
+                    <!-- Bootstrap Table for Roles -->
+                    <table class="table table-bordered table-striped text-center">
+                        <!-- Table Header with Bootstrap classes for styling -->
+                        <thead>
+                            <tr>
+                                <!-- Bootstrap table header cells -->
+                                <th scope="col">Role</th>
+                                <th scope="col">Responsibilities</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Role 1: Head Groomer -->
+                            <tr>
+                                <td><strong>Head Groomer</strong></td>
+                                <td>Responsible for overseeing grooming activities, ensuring all pets are groomed according to the highest standards, and managing the grooming team. Leads all grooming services and ensures top-notch care for each pet.</td>
+                            </tr>
+                            <!-- Role 2: Assistant Groomer -->
+                            <tr>
+                                <td><strong>Assistant Groomer</strong></td>
+                                <td>Assists the head groomer in providing grooming services, maintains a clean and safe environment, and manages smaller grooming tasks. Provides support during grooming appointments to ensure smooth operations.</td>
+                            </tr>
+                            <!-- Role 3: Grooming Assistant -->
+                            <tr>
+                                <td><strong>Grooming Assistant</strong></td>
+                                <td>Supports the grooming team by prepping pets for their grooming sessions, cleaning tools, and ensuring all pets are comfortable during their visit. Helps maintain a safe and pleasant environment for both pets and staff.</td>
+                            </tr>
+                            <!-- Role 4: Grooming Specialist -->
+                            <tr>
+                                <td><strong>Grooming Specialist</strong></td>
+                                <td>Focuses on specialised grooming treatments, such as styling and handling difficult or delicate grooming needs. Ensures each pet receives personalized care based on their breed and grooming requirements.</td>
+                            </tr>
+                            <!-- Role 5: Grooming Trainee -->
+                            <tr>
+                                <td><strong>Grooming Trainee</strong></td>
+                                <td>Assists with basic grooming tasks under the supervision of senior team members. Works towards acquiring essential grooming skills and knowledge, with a focus on learning and growth in the grooming profession.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+    
+            <!-- Staff Hours Timetable Section -->
+            <section id="timetable" class="container py-5"> <!-- Bootstrap container and padding applied -->
+                <h3 class="text-center mb-4">Staff Working Hours</h3> <!-- Bootstrap text-center class for centering the heading -->
+                
+                <!-- Bootstrap Grid System -->
+                <div class="row"> <!-- Bootstrap row to hold grid columns -->
+                    <!-- Table for Staff Hours -->
+                    <div class="col-12"> <!-- Bootstrap col-12 ensures the table spans the full width of the screen -->
+                        <table class="table table-bordered text-center"> <!-- Bootstrap table, table-bordered, and text-center classes -->
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>John Doe (Head Groomer)</th>
+                                    <th>Jane Smith (Assistant Groomer)</th>
+                                    <th>Emily Johnson (Grooming Assistant)</th>
+                                    <th>Michael Brown (Grooming Specialist)</th>
+                                    <th>Alice Green (Grooming Trainee)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Monday Row -->
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                </tr>
+                                <!-- Tuesday Row -->
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                </tr>
+                                <!-- Wednesday Row -->
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                </tr>
+                                <!-- Thursday Row -->
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                </tr>
+                                <!-- Friday Row -->
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                </tr>
+                                <!-- Saturday Row -->
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                    <td>9:00 AM - 5:00 PM</td>
+                                </tr>
+                                <!-- Sunday Row -->
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>Closed</td>
+                                    <td>Closed</td>
+                                    <td>Closed</td>
+                                    <td>Closed</td>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Important Staff Information Section -->
+            <section id="staff-info" class="bg-light py-5"> <!-- Bootstrap background and padding applied here -->
+                <div class="container"> <!-- Bootstrap container for centering the content -->
+                    <!-- Centered Heading -->
+                    <h3 class="text-center mb-4">Important Staff Information</h3> <!-- Bootstrap text-center for centering the heading -->
+                    
+                    <!-- Centered Paragraph -->
+                    <p class="text-center">Please make sure to stay updated on important notices, team meetings, and training schedules. Here's what you need to know:</p> <!-- Bootstrap text-center for centering the paragraph -->
+                    
+                    <!-- Bootstrap Grid Layout for Staff Info -->
+                    <div class="row"> <!-- Bootstrap row to hold grid columns -->
+                        <!-- Column for Staff Information -->
+                        <div class="col-md-8 offset-md-2"> <!-- Bootstrap col-md-8 for the content column and offset-md-2 to center it on medium screens -->
+                            <ul class="list-unstyled"> <!-- Bootstrap list-unstyled to remove default list styling -->
+                                <!-- Monthly Staff Meeting -->
+                                <li><strong>Monthly Staff Meeting:</strong> Every first Monday of the month at 9:00 AM. All staff are required to attend.</li>
+                                <!-- Training Session -->
+                                <li><strong>Training Session:</strong> There will be a grooming technique training session on the 15th of every month. Check the internal notice board for details.</li>
+                                <!-- Holiday Coverage -->
+                                <li><strong>Holiday Coverage:</strong> If you're unable to cover shifts during the holiday season, please notify the team at least two weeks in advance.</li>
+                                <!-- Important Safety Update -->
+                                <li><strong>Important Safety Update:</strong> Please ensure all grooming tools are sanitized after each use. A new cleaning protocol will be rolled out next week.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer id="contact-footer">
+        <p>Contact: Snazzy Paws Grooming</p>
+        <p>Location: Hamilton, New Zealand</p>
+        <p>Opening Hours: Mon - Sat, 9am - 5pm</p>
+    </footer>
+</main>
+</body>
+</html>

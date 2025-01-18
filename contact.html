@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snazzy Paws Grooming</title>
+
+    <!-- Custom CSS-->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         /* Smooth scrolling */
         html {
@@ -27,47 +33,88 @@
             <h2>Contact</h2>
         </div>
 
+         <!-- Navigation Menu -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="booking.html">Booking</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="staff-roster.html">Staff Roster</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content Section -->
-    <main>
-        <!-- Section 1: Side Navigation -->
-        <section class="navigation-cards">
-            <div class="card">
-                <a href="#business-address">Business-Address</a>
+<!-- Main Content Section -->
+<main>
+    <!-- Section 1: Side Navigation Cards -->
+    <section class="container-fluid navigation-cards mt-5 pt-3"> 
+        <!-- Bootstrap container-fluid for full-width layout -->
+        <div class="row">
+             <!-- Each card inside a column -->
+            <div class="col-12 mb-3">
+                <!-- Bootstrap card component for uniform styling -->
+                <div class="card">
+                    <a href="#business-address" class="card-body text-decoration-none text-dark">
+                        Business Address
+                    </a>
+                </div>
             </div>
-            <div class="card">
-                <a href="#contact-form">Contact Form</a>
+            <div class="col-12 mb-3">
+                <div class="card">
+                    <a href="#contact-form" class="card-body text-decoration-none text-dark">
+                        Contact Form
+                    </a>
+                </div>
             </div>
-            <div class="card">
-                <a href="#map-section">Map</a> 
+            <div class="col-12 mb-3">
+                <div class="card">
+                    <a href="#map-section" class="card-body text-decoration-none text-dark">
+                        Map
+                    </a>
+                </div>
             </div>
-            <div class="card">
-                <a href="#operating-hours">Operating Hours</a> 
+            <div class="col-12 mb-3">
+                <div class="card">
+                    <a href="#operating-hours" class="card-body text-decoration-none text-dark">
+                        Operating Hours
+                    </a>
+                </div>
             </div>
-            <div class="card">
-                <a href="#contact-footer">Contact Us</a> 
+            <div class="col-12 mb-3">
+                <div class="card">
+                    <a href="#contact-footer" class="card-body text-decoration-none text-dark">
+                        Contact Us
+                    </a>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
+</main>
 
-        <!-- Business Address and Phone -->
-        <section id="business-address">
-            <h3>Business Address & Phone</h3>
-            <p>Snazzy Paws Grooming</p>
-            <p>Location: Hamilton, New Zealand</p>
-            <p>Phone: (123) 456-7890</p>
+     <!-- Business Address and Phone -->
+<section id="business-address">
+    <h3 class="text-center">Business Address & Phone</h3>
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Text content aligned using Bootstrap's grid system -->
+            <div class="col-md-6 text-center mb-3">
+                <p><strong>Snazzy Paws Grooming</strong></p>
+                <p>Location: Hamilton, New Zealand</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Image using Bootstrap's img-fluid for responsiveness -->
+            <div class="col-md-10 text-center mb-3">
                 <div class="image-container">
-        <img src="images/business-location-1.jpg" alt="Snazzy Paws Grooming Location">
+                    <img src="images/business-location-1.jpg" alt="Snazzy Paws Grooming Location" class="img-fluid custom-image-size">
+                </div>
+            </div>
+        </div>
     </div>
-        </section>
+</section>
 
         <!-- Contact Form Section -->
         <section id="contact-form">
@@ -75,6 +122,7 @@
             <div class="contact-text">
             </div>
             <form>
+                <!-- HTML form fields for user input -->
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -92,27 +140,39 @@
         </section>
 
         <!-- Location Section -->
-        <section id="map-section">
-            <h2>Our Location</h2>
-            <div class="location-text">
-                <p>Find us at our convenient location in Hamilton.</p>
-            </div>
+<section id="map-section" class="container py-5">
+    <!-- Bootstrap's container and padding utility classes -->
+    <h2 class="text-center mb-4">Our Location</h2>
+    <div class="location-text text-center mb-4">
+        <p>Find us at our convenient location in Hamilton.</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.7481523026295!2d175.29216561457182!3d-37.78701697972927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6c4906d50fc1b3%3A0xa45a08d46890f30b!2sHamilton%2C%20New%20Zealand!5e0!3m2!1sen!2s!4v1683746957671!5m2!1sen!2s" width="600" height="450" style="border:0;"></iframe>
+                <!-- Embedded Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.7481523026295!2d175.29216561457182!3d-37.78701697972927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6c4906d50fc1b3%3A0xa45a08d46890f30b!2sHamilton%2C%20New%20Zealand!5e0!3m2!1sen!2s!4v1683746957671!5m2!1sen!2s" width="100%" height="450" style="border:0;"></iframe>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <!-- Section 5: Operating Hours -->
-        <section id="operating-hours">
-            <h3>Operating Hours</h3>
-            <p>We are open Monday to Saturday, from 9 am to 5 pm</p>
-            <div class="image-gallery">
-                <img src="images/business-location-1.jpg" alt="Business Location 1">
-                <img src="images/business-location-2.jpg" alt="Business Location 2">
-                <img src="images/business-location-3.jpg" alt="Business Location 3">
-            </div>
-        </section>
-
+       <!-- Section 5: Operating Hours -->
+<section id="operating-hours" class="container py-5">
+    <h3 class="text-center mb-4">Operating Hours</h3>
+    <p class="text-center mb-4">We are open Monday to Saturday, from 9 am to 5 pm</p>
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-4 mb-4">
+            <!-- Images arranged using Bootstrap's grid system -->
+            <img src="images/business-location-1.jpg" alt="Business Location 1" class="img-fluid rounded">
+        </div>
+        <div class="col-12 col-sm-4 mb-4">
+            <img src="images/business-location-2.jpg" alt="Business Location 2" class="img-fluid rounded">
+        </div>
+        <div class="col-12 col-sm-4 mb-4">
+            <img src="images/business-location-3.jpg" alt="Business Location 3" class="img-fluid rounded">
+        </div>
+    </div>
+</section>
         <!-- Footer Section -->
         <footer id="contact-footer">
             <p>Contact: Snazzy Paws Grooming</p>
@@ -120,5 +180,9 @@
             <p>Opening Hours: Mon - Sat, 9am - 5pm</p>
         </footer>
     </main>
+
+        <!-- Bootstrap JS from CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

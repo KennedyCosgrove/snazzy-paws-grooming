@@ -22,6 +22,16 @@ main { margin-top: 20px; }
 .card:hover { transform: translateY(-5px); }
 .card a { color: white; text-decoration: none; font-size: 1.2rem; font-weight: normal; }
 
+/* Custom CSS for navigation cards */
+.navigation-cards .card {
+    background-color: #f4a261;
+}
+
+.navigation-cards .card a {
+    color: white !important; /* Set the text color inside the anchor tag to white */
+    text-decoration: none; /* To remove underline from the link */
+}
+
 /* About Us Section */
 #about-us { position: relative; width: 100%; height: 550px; overflow: hidden; margin-top: 40px; }
 .about-image { position: absolute; top: 0; left: 0; width: 120%; height: 120%; object-fit: cover; filter: blur(8px); z-index: 1; }
@@ -58,10 +68,22 @@ footer {
 #List-of-services h2 { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 30px; color: #2a2a2a; }
 .service-list-table { max-width: 1000px; margin: 0 auto; padding: 20px; }
 table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
-th { background-color: #f1f1f1; font-weight: bold; font-size: 1.2rem; color: #333; }
-td { font-size: 1.1rem; color: #555; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; color: black !important; } /* Force black color */
+th { background-color: #f1f1f1; font-weight: bold; font-size: 1.2rem; color: black !important; } /* Force black color */
+td { font-size: 1.1rem; color: black !important; } /* Force black color */
 tbody tr:hover { background-color: #f9f9f9; }
+
+.table-primary {
+    background-color: #e0f7fa !important; /* Light blue background for the header */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e4e4e4; 
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffffff; /* White background for even rows */
+}
 
 @media (max-width: 768px) { table { font-size: 1rem; } th, td { padding: 10px; } }
 @media (max-width: 480px) { table { font-size: 0.9rem; } th, td { padding: 8px; } }
@@ -86,7 +108,7 @@ tbody tr:hover { background-color: #f9f9f9; }
 table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
 th, td { padding: 12px; text-align: left; border: 1px solid #ddd; }
 th { background-color: #f4a261; color: white; font-size: 1.1rem; }
-td { background-color: #fff; font-size: 1rem; }
+td { background-color: #fff; color: #333; font-size: 1rem; }
 tbody tr:hover { background-color: #f1f1f1; }
 
 /* Schedule a Service Button */
@@ -151,19 +173,17 @@ button:hover { background-color: #e07b2a; }
 
 /* Contact Page */
 .main-content, #business-address, #map-section, #contact-form {
-    padding: 40px 20px;
-    margin-top: 60px;
-    text-align: center;
+    padding: 40px 20px; margin-top: 60px; text-align: center;
 }
 
 #business-address, #map-section { background-color: #e0e0e0; }
-#operating-hours, #contact-form { background-color: #d6d6d6; }
+#operating-hours, #contact-form { background-color: #e0e0e0; }
 
 h3, h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 40px; text-align: center; }
-p, .operating-hours-text, .location-text { font-size: 1.2rem; color: #555; margin-bottom: 10px; text-align: center; } /* Center text for operating hours description */
+p, .operating-hours-text, .location-text { font-size: 1.2rem; color: #555; margin-bottom: 10px; text-align: center; }
 
 #business-address .image-container img, #operating-hours .image-gallery img {
-    max-width: 40%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduced max-width to 40% */
+    max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); max-height: 500px;
 }
 
 #operating-hours .image-gallery { display: flex; justify-content: center; gap: 20px; padding: 0 15%; }
@@ -177,10 +197,7 @@ p, .operating-hours-text, .location-text { font-size: 1.2rem; color: #555; margi
     width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ddd;
 }
 
-#contact-form button {
-    background-color: #f4a261; color: white; font-size: 1.2rem; cursor: pointer;
-}
-
+#contact-form button { background-color: #f4a261; color: white; font-size: 1.2rem; cursor: pointer; }
 #contact-form button:hover { background-color: #e07b2a; }
 
 /* Responsive Design */
@@ -192,7 +209,6 @@ p, .operating-hours-text, .location-text { font-size: 1.2rem; color: #555; margi
 @media screen and (max-width: 480px) {
     #contact-form input, #contact-form textarea, #contact-form button { padding: 8px; font-size: 0.9rem; }
 }
-
 
 /* Gallery Page */
 .main-content { padding: 40px 20px; }
@@ -279,24 +295,40 @@ p, .operating-hours-text, .location-text { font-size: 1.2rem; color: #555; margi
 
 /* Before and After Section */
 #before-after .image-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
     gap: 20px;
+    padding: 20px;
 }
+
 #before-after .image-group {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column; /* Stack before and after images vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
 #before-after .image-box {
     position: relative;
-    width: 45%;
+    width: 100%; /* Full width within the grid cell */
+    max-width: 350px; /* Control the max size of the images */
     border: 2px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    padding: 10px;
     background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-#before-after .image-box img { width: 100%; height: auto; border-radius: 5px; }
+
+#before-after .image-box img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures images are block-level for centering */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
 #before-after .label {
     position: absolute;
     top: 10px;
@@ -309,15 +341,97 @@ p, .operating-hours-text, .location-text { font-size: 1.2rem; color: #555; margi
     font-size: 1.2rem;
     text-transform: uppercase;
 }
-#before-after .before-box .label { background: rgba(255,99,71,0.8); }
-#before-after .after-box .label { background: rgba(34,139,34,0.8); }
+
+#before-after .before-box .label {
+    background: rgba(255,99,71,0.8); /* Tomato for Before */
+}
+
+#before-after .after-box .label {
+    background: rgba(34,139,34,0.8); /* Forest Green for After */
+}
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .image-grid { grid-template-columns: repeat(2, 1fr); }
-    #before-after .image-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 1024px) {
+    #before-after .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
 }
+
+@media (max-width: 768px) {
+    #before-after .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile tablets */
+    }
+}
+
 @media (max-width: 480px) {
-    .image-grid { grid-template-columns: 1fr; }
-    #before-after .image-grid { grid-template-columns: 1fr; }
+    #before-after .image-grid {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+}
+
+/* Privacy Policy and Data Retention Policy Styling */
+#privacy-policy, #data-retention-policy {
+    background-color: #ffffff; /* White background for clarity */
+    padding: 30px; /* Ample padding for spacing */
+    border-radius: 8px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 40px; /* Space between the sections */
+}
+
+#privacy-policy h2, #data-retention-policy h2 {
+    font-size: 2rem; /* Main section title size */
+    font-weight: bold; /* Bold for importance */
+    color: #333; /* Dark color for text */
+    margin-bottom: 20px; /* Space below title */
+}
+
+#privacy-policy h3, #data-retention-policy h3 {
+    font-size: 1.5rem; /* Slightly smaller for subheadings */
+    font-weight: bold;
+    color: #007bff; /* Professional blue color for subheadings */
+    margin-top: 20px; /* Space before subheading */
+}
+
+#privacy-policy p, #data-retention-policy p {
+    font-size: 1rem; /* Body text size */
+    line-height: 1.6; /* Improved readability with line-height */
+    color: #555; /* Lighter text for paragraphs */
+    margin-bottom: 15px; /* Space after paragraphs */
+}
+
+#privacy-policy ul, #data-retention-policy ul {
+    list-style-type: none; /* Remove default list bullets */
+    padding-left: 0; /* Align to the left */
+}
+
+#privacy-policy ul li, #data-retention-policy ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+#privacy-policy ul li strong, #data-retention-policy ul li strong {
+    font-weight: bold; /* Bolded text for list titles */
+}
+
+#privacy-policy a, #data-retention-policy a {
+    color: #007bff; /* Consistent link color */
+    text-decoration: none; /* Remove underline */
+}
+
+#privacy-policy a:hover, #data-retention-policy a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    #privacy-policy h2, #data-retention-policy h2 {
+        font-size: 1.8rem; /* Slightly smaller heading size on mobile */
+    }
+
+    #privacy-policy h3, #data-retention-policy h3 {
+        font-size: 1.3rem; /* Smaller subheading size on mobile */
+    }
+
+    #privacy-policy p, #data-retention-policy p {
+        font-size: 0.95rem; /* Smaller text size on mobile */
+    }
 }

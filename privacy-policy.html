@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snazzy Paws Grooming</title>
+
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Logo and Title -->
+    <header>
+        <div class="logo">
+            <img src="images/Logo.png" alt="Snazzy Paws Logo">
+        </div>
+        <div class="title">
+            <h1>Snazzy Paws Grooming</h1> <!-- Clear font, aligned left with logo -->
+        </div>
+        
+        <!-- Center Section: Page Title (Dynamic) -->
+        <div class="page-title">
+            <h2>Privacy Policy</h2>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="staff-roster.html">Staff Roster</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Main Content Section -->
+<main>
+    <div class="main-content-bg">
+        <!-- Section 1: Side Navigation Cards -->
+        <section class="container-fluid navigation-cards mt-5 pt-3"> <!-- Bootstrapped: container-fluid for full-width and margin/padding utilities -->
+            <div class="row">
+                <!-- Bootstrapped Grid System: Each card inside a column with col-12 to stack vertically -->
+                <div class="col-12 mb-3">
+                    <div class="card">
+                        <a href="#privacy-policy" class="card-body text-decoration-none text-dark">
+                            Privacy Policy
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 mb-3">
+                    <div class="card">
+                        <a href="#data-retention-policy" class="card-body text-decoration-none text-dark">
+                            Data Retention Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column: Privacy Policy Content -->
+        <div class="container mt-5">
+            <div class="row justify-content-center"> <!-- Bootstrapped flexbox utility for centering content -->
+                <div class="col-12 col-md-8"> <!-- Bootstrapped grid system for responsive column layout -->
+                    <div class="bg-white p-4 rounded shadow-sm main-content-overlay"> <!-- Bootstrapped utility classes for styling: background, padding, border-radius, and shadow -->
+                        <section id="privacy-policy">
+                            <h2 class="mb-4">Our Privacy Policy</h2>
+                            <p>
+                                At Snazzy Paws Grooming, we take your privacy seriously. This privacy policy outlines how we collect, use, and protect your personal information when you visit our website or use our services.
+                            </p>
+                            <h3 class="mt-4">1. Information We Collect</h3>
+                            <ul>
+                                <li><strong>Personal Information:</strong> Your name, email address, phone number, and other contact details provided during booking or inquiries.</li>
+                                <li><strong>Pet Information:</strong> Your pet’s name, breed, and other relevant details for grooming services.</li>
+                                <li><strong>Website Usage Data:</strong> Cookies, IP addresses, and analytics data to improve our website's performance.</li>
+                            </ul>
+                            <h3 class="mt-4">2. How We Use Your Information</h3>
+                            <p>
+                                The information we collect is used to provide and improve our services, process bookings, and communicate with you. We do not share your information with third parties without your consent, except when required by law.
+                            </p>
+                            <h3 class="mt-4">3. Data Protection</h3>
+                            <p>
+                                We implement security measures to protect your data from unauthorized access, loss, or misuse. However, no method of transmission over the internet is entirely secure, so we cannot guarantee absolute security.
+                            </p>
+                            <h3 class="mt-4">4. Your Rights</h3>
+                            <p>
+                                You have the right to access, update, or delete your personal information. To exercise these rights, please contact us at <a href="mailto:info@snazzypaws.co.nz">info@snazzypaws.co.nz</a>.
+                            </p>
+                            <h3 class="mt-4">5. Changes to This Policy</h3>
+                            <p>
+                                We may update this privacy policy from time to time. Any changes will be posted on this page, and we encourage you to review it regularly.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Retention Policy section -->
+        <div class="container mt-5">
+            <div class="row justify-content-center"> <!-- Bootstrapped flexbox utility for centering content -->
+                <div class="col-12 col-md-8">
+                    <div class="bg-white p-4 rounded shadow-sm main-content-overlay">
+                        <section id="data-retention-policy">
+                            <h2 class="mb-4">Data Retention Policy</h2>
+                            <p>At Snazzy Paws Grooming, we understand the importance of safeguarding your personal information. Our data retention policy ensures that we only keep your data for as long as necessary to provide our services and fulfill legal obligations.</p>
+                            <h3 class="mt-4">1. Retention Period</h3>
+                            <p>We will retain your personal data for as long as needed to provide the services you've requested or as required by law. For example, information related to bookings may be kept for up to 12 months after the service is completed, unless otherwise requested by you.</p>
+                            <h3 class="mt-4">2. Data Deletion</h3>
+                            <p>You have the right to request the deletion of your personal information at any time. To request data removal or for any related concerns, please contact us at <a href="mailto:info@snazzypaws.co.nz">info@snazzypaws.co.nz</a>.</p>
+                            <h3 class="mt-4">3. Exceptions</h3>
+                            <p>In some cases, we may need to retain data for longer periods due to legal or regulatory requirements. For example, financial transaction records may be kept for a minimum of 7 years to comply with tax laws.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+        <!-- Footer Section -->
+        <footer id="contact-footer">
+            <p>Contact: Snazzy Paws Grooming</p>
+            <p>Location: Hamilton, New Zealand</p>
+            <p>Opening Hours: Mon - Sat, 9am - 5pm</p>
+        </footer>
+    </main>
+</body>
+</html>

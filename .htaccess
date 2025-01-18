@@ -1,0 +1,6 @@
+<Files staff-roster.html>
+    AuthType Basic
+    AuthName "Restricted Area"
+    AuthUserFile "C:/xampp/SnazzyPawsGrooming/.htpasswd"
+    Require valid-user
+</Files>
